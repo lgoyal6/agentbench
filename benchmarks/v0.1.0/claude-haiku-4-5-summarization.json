@@ -1,0 +1,140 @@
+{
+  "run_id": "47e73466-481f-46f0-846b-fdf14a154734",
+  "suite_name": "summarization",
+  "suite_version": "0.1.0",
+  "agent_name": "simple-reasoner",
+  "config": {
+    "concurrency": 4,
+    "max_tasks": null,
+    "judge_model": "gpt-4o-mini",
+    "fail_fast": false,
+    "include_messages": false,
+    "seed": null
+  },
+  "accuracy": 1.0,
+  "total_cost_usd": 0.00347,
+  "avg_cost_per_run": 0.000347,
+  "cost_per_correct_answer": 0.000347,
+  "p50_latency_ms": 1419.975812503253,
+  "p95_latency_ms": 22615.00639344882,
+  "p99_latency_ms": 34666.886578695565,
+  "cost_adjusted_accuracy": 2.8818360754003596,
+  "efficiency_score": 0.11663529159557007,
+  "n_tasks": 10,
+  "n_correct": 10,
+  "n_errors": 0,
+  "outcomes": [
+    {
+      "task_id": "sum-01",
+      "score": 0.9364060759544373,
+      "correct": true,
+      "cost_usd": 0.000437,
+      "latency_ms": 4202.41166598862,
+      "total_tokens": 201,
+      "prediction": "The James Webb Space Telescope, launched in 2021 and positioned 1.5 million kilometers from Earth, is the largest infrared observatory that observes distant galaxies, exoplanet atmospheres, and star-forming regions invisible to previous telescopes.",
+      "expected": "The James Webb Space Telescope, launched in 2021, is a powerful infrared observatory studying distant galaxies, exoplanets, and star formation from a point 1.5 million kilometers from Earth.",
+      "error": null
+    },
+    {
+      "task_id": "sum-02",
+      "score": 0.9170706272125244,
+      "correct": true,
+      "cost_usd": 0.000304,
+      "latency_ms": 2227.9237500042655,
+      "total_tokens": 156,
+      "prediction": "Photosynthesis is the process by which plants and other organisms convert light energy into chemical energy stored in glucose, forming the foundation of most food chains on Earth.",
+      "expected": "Photosynthesis is the process plants and algae use to convert light energy into glucose using carbon dioxide and water, releasing oxygen and forming the base of food chains.",
+      "error": null
+    },
+    {
+      "task_id": "sum-03",
+      "score": 0.8402161598205566,
+      "correct": true,
+      "cost_usd": 0.000292,
+      "latency_ms": 2523.2292499858886,
+      "total_tokens": 164,
+      "prediction": "Quantum entanglement is a phenomenon where two or more particles become correlated such that measuring one instantly affects the other, regardless of distance.",
+      "expected": "Quantum entanglement links particles so their states remain correlated across any distance, producing instantaneous measurement correlations that Einstein called 'spooky action at a distance'.",
+      "error": null
+    },
+    {
+      "task_id": "sum-04",
+      "score": 0.8368058204650879,
+      "correct": true,
+      "cost_usd": 0.000375,
+      "latency_ms": 37679.85662500723,
+      "total_tokens": 179,
+      "prediction": "Plate tectonics is the theory that Earth's outer shell consists of moving plates whose interactions cause earthquakes, volcanoes, mountains, and oceanic trenches, unifying geological observations since the 1960s.",
+      "expected": "Plate tectonics describes how Earth's crust is broken into moving plates whose interactions cause earthquakes, volcanoes, and mountains, unifying geology since the 1960s.",
+      "error": null
+    },
+    {
+      "task_id": "sum-05",
+      "score": 0.7877641916275024,
+      "correct": true,
+      "cost_usd": 0.00031,
+      "latency_ms": 1039.2328330199234,
+      "total_tokens": 158,
+      "prediction": "The Industrial Revolution transformed agrarian societies into industrial ones through innovations like steam power and factory systems, fundamentally changing labor, urbanization, and trade across Europe and North America.",
+      "expected": "The Industrial Revolution began in late 1700s Britain and shifted economies from agriculture to industry through steam power and factories, reshaping labor, cities, and trade.",
+      "error": null
+    },
+    {
+      "task_id": "sum-06",
+      "score": 0.9100325107574463,
+      "correct": true,
+      "cost_usd": 0.000378,
+      "latency_ms": 1800.7187919865828,
+      "total_tokens": 186,
+      "prediction": "CRISPR-Cas9 is a gene-editing technology that uses an RNA guide to direct the Cas9 enzyme to cut specific DNA sequences, allowing cells to repair the cuts with desired edits.",
+      "expected": "CRISPR-Cas9 edits genes by using a guide RNA to direct the Cas9 enzyme to cut specific DNA, allowing edits during repair. Originally a bacterial immune system, it is now standard in molecular biology.",
+      "error": null
+    },
+    {
+      "task_id": "sum-07",
+      "score": 0.9060232043266296,
+      "correct": true,
+      "cost_usd": 0.000337,
+      "latency_ms": 964.2527499818243,
+      "total_tokens": 165,
+      "prediction": "Climate change, driven primarily by human fossil fuel burning since the mid-20th century, causes rising temperatures and weather pattern shifts that result in rising sea levels, extreme weather, and ecosystem disruption.",
+      "expected": "Climate change is the long-term shift in weather driven mostly by human fossil fuel use since the mid-1900s, causing sea level rise, extreme weather, and ecosystem disruption.",
+      "error": null
+    },
+    {
+      "task_id": "sum-08",
+      "score": 0.9163134098052979,
+      "correct": true,
+      "cost_usd": 0.000322,
+      "latency_ms": 727.6638750045095,
+      "total_tokens": 170,
+      "prediction": "The transformer architecture, which uses self-attention to process sequences in parallel, replaced recurrent neural networks and became the foundation for modern language models like GPT and BERT.",
+      "expected": "The 2017 transformer architecture introduced self-attention, replacing recurrent networks, enabling parallel processing of sequences, and underlying modern language models such as GPT and BERT.",
+      "error": null
+    },
+    {
+      "task_id": "sum-09",
+      "score": 0.9289063811302185,
+      "correct": true,
+      "cost_usd": 0.000355,
+      "latency_ms": 762.0590000005905,
+      "total_tokens": 179,
+      "prediction": "Mitochondria are eukaryotic organelles that generate ATP through oxidative phosphorylation and are believed to have originated from bacteria engulfed by ancestral eukaryotic cells.",
+      "expected": "Mitochondria are eukaryotic organelles that produce ATP, contain their own DNA, and likely originated from bacteria engulfed by an ancestral cell in an endosymbiotic event.",
+      "error": null
+    },
+    {
+      "task_id": "sum-10",
+      "score": 0.8864074945449829,
+      "correct": true,
+      "cost_usd": 0.00036,
+      "latency_ms": 971.1570829967968,
+      "total_tokens": 180,
+      "prediction": "The internet evolved from a 1960s military project (ARPANET) into today's global communication and commerce network through the adoption of TCP/IP protocols and the invention of the World Wide Web.",
+      "expected": "The internet evolved from ARPANET in the 1960s, adopted TCP/IP in 1983, and gained the World Wide Web in 1989, becoming the primary medium for global communication and commerce.",
+      "error": null
+    }
+  ],
+  "started_at": 1781636737.849781,
+  "finished_at": 1781636775.587052
+}

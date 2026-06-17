@@ -1,0 +1,140 @@
+{
+  "run_id": "e1496bcf-e972-4526-8429-6c31fc562540",
+  "suite_name": "multihop_qa",
+  "suite_version": "0.1.0",
+  "agent_name": "simple-reasoner",
+  "config": {
+    "concurrency": 4,
+    "max_tasks": null,
+    "judge_model": "gpt-4o-mini",
+    "fail_fast": false,
+    "include_messages": false,
+    "seed": null
+  },
+  "accuracy": 0.9,
+  "total_cost_usd": 0.008052,
+  "avg_cost_per_run": 0.0008052000000000001,
+  "cost_per_correct_answer": 0.0008946666666666667,
+  "p50_latency_ms": 1991.6113545041298,
+  "p95_latency_ms": 3356.9838225463163,
+  "p99_latency_ms": 3766.176397308591,
+  "cost_adjusted_accuracy": 1.1177333361483655,
+  "efficiency_score": 0.1176401423900479,
+  "n_tasks": 10,
+  "n_correct": 9,
+  "n_errors": 0,
+  "outcomes": [
+    {
+      "task_id": "mhqa-01",
+      "score": 0.0,
+      "correct": false,
+      "cost_usd": 0.000517,
+      "latency_ms": 2351.6347499971744,
+      "total_tokens": 161,
+      "prediction": "Let me work through this step-by-step.\n\nGiven information:\n- The author of '1984' was born in 1903\n- He died at age 46\n\nTo find the year of death:\n- Birth year: 1903\n- Age at death: 46\n- Year of death = 1903 + 46 = 1949\n\nAnswer: 1949",
+      "expected": "1950",
+      "error": null
+    },
+    {
+      "task_id": "mhqa-02",
+      "score": 1.0,
+      "correct": true,
+      "cost_usd": 0.0006850000000000001,
+      "latency_ms": 2731.8284999928437,
+      "total_tokens": 213,
+      "prediction": "I need to find the total height if the Eiffel Tower is stacked on top of the Empire State Building.\n\n**Given information:**\n- Eiffel Tower height: 330 meters\n- Empire State Building height: 443 meters\n\n**Calculation:**\nWhen stacking one structure on top of another, I add their heights:\n\nTotal height = Height of Empire State Building + Height of Eiffel Tower\nTotal height = 443 + 330\nTotal height = 773 meters\n\nAnswer: 773",
+      "expected": "773",
+      "error": null
+    },
+    {
+      "task_id": "mhqa-03",
+      "score": 1.0,
+      "correct": true,
+      "cost_usd": 0.000418,
+      "latency_ms": 2112.5632920011412,
+      "total_tokens": 142,
+      "prediction": "I need to find the number of years between Marie Curie's two Nobel Prizes.\n\n**Given information:**\n- Physics Nobel Prize: 1903\n- Chemistry Nobel Prize: 1911\n\n**Calculation:**\n1911 - 1903 = 8 years\n\nAnswer: 8",
+      "expected": "8",
+      "error": null
+    },
+    {
+      "task_id": "mhqa-04",
+      "score": 1.0,
+      "correct": true,
+      "cost_usd": 0.000706,
+      "latency_ms": 3868.474540999159,
+      "total_tokens": 214,
+      "prediction": "I need to find Leonardo da Vinci's age when he completed the Mona Lisa in 1517.\n\n**Given information:**\n- Leonardo da Vinci was born in 1452\n- The Mona Lisa was completed in 1517\n\n**Calculation:**\nAge when painting was completed = Year painting completed - Year of birth\nAge = 1517 - 1452\nAge = 65\n\nLeonardo da Vinci was 65 years old when he completed the Mona Lisa in 1517.\n\nAnswer: 65",
+      "expected": "65",
+      "error": null
+    },
+    {
+      "task_id": "mhqa-05",
+      "score": 1.0,
+      "correct": true,
+      "cost_usd": 0.001256,
+      "latency_ms": 1887.4152500065975,
+      "total_tokens": 328,
+      "prediction": "I need to find by what percentage Mount Everest is taller than Mount Kilimanjaro.\n\n**Step 1: Find the difference in heights**\n- Mount Everest: 8848 meters\n- Mount Kilimanjaro: 5895 meters\n- Difference: 8848 - 5895 = 2953 meters\n\n**Step 2: Calculate the percentage increase**\nThe percentage by which Everest is taller than Kilimanjaro is calculated relative to Kilimanjaro's height:\n\nPercentage = (Difference / Kilimanjaro's height) × 100\nPercentage = (2953 / 5895) × 100\n\n**Step 3: Perform the calculation**\n2953 / 5895 = 0.50084...\n\n0.50084... × 100 = 50.084...%\n\n**Step 4: Round to the nearest whole number**\n50.084...% rounds to **50%**\n\nAnswer: 50",
+      "expected": "50",
+      "error": null
+    },
+    {
+      "task_id": "mhqa-06",
+      "score": 1.0,
+      "correct": true,
+      "cost_usd": 0.00111,
+      "latency_ms": 2095.807459001662,
+      "total_tokens": 282,
+      "prediction": "I need to find the completed years of age on July 1, 2050, for someone born on January 1, 2000.\n\n**Step 1: Find the difference in years between the two dates.**\n- Birth date: January 1, 2000\n- Target date: July 1, 2050\n- Difference: 2050 - 2000 = 50 years\n\n**Step 2: Check if the birthday has occurred by the target date.**\n- The person's birthday is January 1\n- The target date is July 1, 2050\n- Since July 1 comes after January 1 in the same year, the birthday HAS occurred in 2050\n\n**Step 3: Determine completed years.**\nSince the birthday (January 1) has already passed by July 1, 2050, the person has completed 50 years of age.\n\nAnswer: 50",
+      "expected": "50",
+      "error": null
+    },
+    {
+      "task_id": "mhqa-07",
+      "score": 1.0,
+      "correct": true,
+      "cost_usd": 0.00047100000000000006,
+      "latency_ms": 1022.6460830017459,
+      "total_tokens": 159,
+      "prediction": "I need to find the number of years between 1865 and 1918.\n\nTo calculate this, I'll subtract the earlier year from the later year:\n1918 - 1865 = 53\n\nTherefore, 53 years passed between the end of the American Civil War and the end of World War I.\n\nAnswer: 53",
+      "expected": "53",
+      "error": null
+    },
+    {
+      "task_id": "mhqa-08",
+      "score": 1.0,
+      "correct": true,
+      "cost_usd": 0.001169,
+      "latency_ms": 1681.6894589865115,
+      "total_tokens": 305,
+      "prediction": "I need to find how many minutes it takes light to travel from the sun to Earth.\n\n**Given information:**\n- Speed of light: 300,000 km/s\n- Distance from sun to Earth: 150,000,000 km\n\n**Step 1: Calculate the time in seconds**\n\nUsing the formula: time = distance ÷ speed\n\nTime (in seconds) = 150,000,000 km ÷ 300,000 km/s\n\nTime (in seconds) = 150,000,000 ÷ 300,000\n\nTime (in seconds) = 500 seconds\n\n**Step 2: Convert seconds to minutes**\n\nTime (in minutes) = 500 seconds ÷ 60 seconds/minute\n\nTime (in minutes) = 8.333... minutes\n\n**Step 3: Round to the nearest whole number**\n\n8.333... rounds to **8 minutes**\n\nAnswer: 8",
+      "expected": "8",
+      "error": null
+    },
+    {
+      "task_id": "mhqa-09",
+      "score": 1.0,
+      "correct": true,
+      "cost_usd": 0.000673,
+      "latency_ms": 1439.2787909891922,
+      "total_tokens": 205,
+      "prediction": "I need to find how many years after Shakespeare's death Beethoven was born.\n\n**Step 1: Identify Shakespeare's death year**\nShakespeare died in 1616\n\n**Step 2: Identify Beethoven's birth year**\nBeethoven was born in 1770\n\n**Step 3: Calculate the difference**\nYears after Shakespeare's death = Beethoven's birth year - Shakespeare's death year\nYears after Shakespeare's death = 1770 - 1616 = 154\n\nAnswer: 154",
+      "expected": "154",
+      "error": null
+    },
+    {
+      "task_id": "mhqa-10",
+      "score": 1.0,
+      "correct": true,
+      "cost_usd": 0.0010470000000000002,
+      "latency_ms": 1814.5679160079453,
+      "total_tokens": 287,
+      "prediction": "I need to find how many days it would take to walk the entire length of the Great Wall of China.\n\n**Given information:**\n- Length of Great Wall: 21,000 km\n- Walking speed: 5 km/hour\n- Walking time per day: 8 hours/day\n\n**Step 1: Calculate distance walked per day**\nDistance per day = speed × hours per day\nDistance per day = 5 km/hour × 8 hours/day = 40 km/day\n\n**Step 2: Calculate total days needed**\nTotal days = Total distance ÷ Distance per day\nTotal days = 21,000 km ÷ 40 km/day = 525 days\n\n**Step 3: Round to nearest whole number**\n525 days is already a whole number.\n\nAnswer: 525",
+      "expected": "525",
+      "error": null
+    }
+  ],
+  "started_at": 1781636375.275394,
+  "finished_at": 1781636381.0917819
+}
