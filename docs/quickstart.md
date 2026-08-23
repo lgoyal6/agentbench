@@ -55,7 +55,7 @@ g.add_edge("reason", END)
 agent = AgentWrapper(g.compile(), name="my-agent", model="gpt-4o-mini")
 ```
 
-The key call is `completion_with_capture` — that's what registers token usage
+The key call is `completion_with_capture` - that's what registers token usage
 into AgentBench's capture buffer.
 
 ## Run an eval

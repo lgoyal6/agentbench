@@ -10,9 +10,13 @@ from pathlib import Path
 from typer.testing import CliRunner
 
 from agentbench import __version__
-from agentbench.cli import app
+from agentbench.cli import app, console
 
 runner = CliRunner()
+
+# Rich sizes tables to the detected terminal width, so assertions on rendered
+# output are otherwise a function of whoever runs the suite. Pin a wide console.
+console.width = 200
 
 
 def test_version() -> None:

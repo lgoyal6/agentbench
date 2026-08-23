@@ -75,6 +75,9 @@ async def _execute_run(run_id: str, request: RunRequest) -> None:
         state["error"] = f"{type(exc).__name__}: {exc}"
 
 
+_background_tasks: set[asyncio.Task[None]] = set()
+
+
 @app.get("/health")
 async def health() -> dict[str, str]:
     return {"status": "ok", "version": __version__}
@@ -90,7 +93,9 @@ async def create_run(request: RunRequest) -> RunCreatedResponse:
             "error": None,
             "progress": 0.0,
         }
-    asyncio.create_task(_execute_run(run_id, request))
+    task = asyncio.create_task(_execute_run(run_id, request))
+    _background_tasks.add(task)
+    task.add_done_callback(_background_tasks.discard)
     return RunCreatedResponse(run_id=run_id, status="pending")
 
 

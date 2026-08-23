@@ -36,7 +36,7 @@ def load_hf_suite(
         A populated :class:`EvalSuite`.
     """
     try:
-        from datasets import load_dataset  # type: ignore[import-not-found]
+        from datasets import load_dataset
     except ImportError as exc:  # pragma: no cover
         raise ImportError(
             "datasets is required for load_hf_suite; install with `pip install datasets`."

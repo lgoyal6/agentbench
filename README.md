@@ -30,16 +30,16 @@ not just the highest-scoring one.
 
 - **Single CLI command** to point at any LangGraph `StateGraph` and get back a
   full eval report.
-- **Four built-in eval suites** — math reasoning (20), tool use (15),
+- **Four built-in eval suites** - math reasoning (20), tool use (15),
   summarization (10), multi-hop QA (10).
-- **Three scorers** — exact match (with numeric fallback), semantic similarity
+- **Three scorers** - exact match (with numeric fallback), semantic similarity
   via `sentence-transformers`, and LLM-as-judge via LiteLLM.
 - **Per-node token & cost tracking** via LiteLLM, model-agnostic.
-- **Composite metrics** — `cost_adjusted_accuracy` and `efficiency_score`.
+- **Composite metrics** - `cost_adjusted_accuracy` and `efficiency_score`.
 - **HPO via Ray Tune + ASHA** over prompt style, model, temperature, and decoding.
-- **Leaderboards** — local JSON by default, optional Supabase backend.
-- **Tracking integrations** — W&B Weave, MLflow, or BYO (`TrackerProtocol`).
-- **FastAPI HTTP service** — `POST /run`, `GET /run/{id}`, `GET /leaderboard`.
+- **Leaderboards** - local JSON by default, optional Supabase backend.
+- **Tracking integrations** - W&B Weave, MLflow, or BYO (`TrackerProtocol`).
+- **FastAPI HTTP service** - `POST /run`, `GET /run/{id}`, `GET /leaderboard`.
 
 ## Install
 
@@ -95,19 +95,19 @@ no tools, no few-shot, `temperature=0`. Raw JSON in
 | tool_use       | claude-haiku-4-5     | 15 | 1.000    | $0.00059         | 1745 ms     | 3216 ms     |
 | summarization  | claude-haiku-4-5     | 10 | 1.000    | $0.00035         | 1420 ms     | 22615 ms    |
 | multihop_qa    | claude-haiku-4-5     | 10 | 0.900    | $0.00081         | 1992 ms     | 3357 ms     |
-| **overall**    | **claude-haiku-4-5** | 55 | **0.964**| **$0.00076**     | —           | —           |
+| **overall**    | **claude-haiku-4-5** | 55 | **0.964**| **$0.00076**     | -           | -           |
 
 Run on 2026-06-16 against `claude-haiku-4-5-20251001` via LiteLLM. Total
 spend: $0.0417 across all 55 tasks (\~$0.001 per task, end-to-end). The
-summarization p95 outlier is a single slow API response — p50 is 1.4 s.
+summarization p95 outlier is a single slow API response - p50 is 1.4 s.
 
 Multi-model comparison rows (gpt-4o-mini, gemini-2.5-flash) are pending:
 OpenAI account needs billing enabled, and Gemini free-tier daily quota was
 exhausted during preliminary runs. Re-run instructions are in
 [`benchmarks/v0.1.0/README.md`](benchmarks/v0.1.0/README.md).
 
-The framework's intended takeaway — that highest-accuracy is rarely the same
-model as best `cost_adjusted_accuracy` — needs the cross-model comparison to
+The framework's intended takeaway - that highest-accuracy is rarely the same
+model as best `cost_adjusted_accuracy` - needs the cross-model comparison to
 demonstrate. Watch this space.
 
 ## Architecture
@@ -146,10 +146,10 @@ demonstrate. Watch this space.
 ## Documentation
 
 - [Quickstart](docs/quickstart.md)
-- [Concepts](docs/concepts.md) — the math behind `cost_adjusted_accuracy`
+- [Concepts](docs/concepts.md) - the math behind `cost_adjusted_accuracy`
 - [API reference](docs/api_reference.md)
 - [Contributing](docs/contributing.md)
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT - see [LICENSE](LICENSE).

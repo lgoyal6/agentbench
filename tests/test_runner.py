@@ -50,7 +50,7 @@ def test_runner_handles_agent_errors(tiny_suite) -> None:
     class BoomAgent:
         name = "boom"
 
-        def invoke(self, input):  # noqa: A002
+        def invoke(self, input):
             raise RuntimeError("kaboom")
 
     report = EvalRunner(BoomAgent(), tiny_suite, RunConfig(fail_fast=False)).run()

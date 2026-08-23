@@ -98,7 +98,7 @@ class SemanticSimilarityScorer:
             return 0.0
         model = self._ensure_model()
         try:
-            from sentence_transformers import util  # type: ignore[import-untyped]
+            from sentence_transformers import util
 
             embeddings = model.encode([prediction, reference], convert_to_tensor=True)
             sim = float(util.cos_sim(embeddings[0], embeddings[1]).item())

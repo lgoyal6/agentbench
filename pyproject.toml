@@ -85,7 +85,10 @@ ignore = ["E501", "B008"]
 "examples/*" = ["A002"]
 
 [tool.mypy]
-python_version = "3.11"
+# 3.12 rather than the 3.11 floor: ray re-exports numpy, whose bundled stubs use
+# 3.12 `type` statements that mypy cannot parse at a 3.11 target. Ruff still
+# enforces py311 syntax, which is where the real 3.11 risk lives.
+python_version = "3.12"
 strict = false
 warn_unused_ignores = true
 warn_redundant_casts = true

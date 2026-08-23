@@ -19,7 +19,7 @@ def get_leaderboard() -> LocalLeaderboard:
 
 __all__ = [
     "LeaderboardEntry",
-    "ScoreBreakdown",
     "LocalLeaderboard",
+    "ScoreBreakdown",
     "get_leaderboard",
 ]

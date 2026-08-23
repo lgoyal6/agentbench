@@ -2,7 +2,8 @@
 
 from __future__ import annotations
 
-from typing import Any, Iterator, Literal
+from collections.abc import Iterator
+from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -41,7 +42,7 @@ class EvalSuite(BaseModel):
 
     def filter(
         self, *, difficulty: Difficulty | None = None, scorer_type: ScorerType | None = None
-    ) -> "EvalSuite":
+    ) -> EvalSuite:
         """Return a new suite filtered by difficulty and/or scorer type."""
         tasks = [
             t
@@ -56,7 +57,7 @@ class EvalSuite(BaseModel):
             tasks=tasks,
         )
 
-    def sample(self, n: int, *, seed: int = 0) -> "EvalSuite":
+    def sample(self, n: int, *, seed: int = 0) -> EvalSuite:
         """Deterministically sample ``n`` tasks."""
         import random
 

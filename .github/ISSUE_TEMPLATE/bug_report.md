@@ -44,4 +44,4 @@ What you actually saw. Paste the full traceback inside a code block.
 
 **Additional context**
 
-Anything else that might help — full JSON report, debug logs, etc.
+Anything else that might help - full JSON report, debug logs, etc.

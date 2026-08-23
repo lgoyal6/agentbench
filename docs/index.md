@@ -20,15 +20,15 @@ table with accuracy, total cost, latency percentiles, and the composite
 
 ## What you get
 
-* **4 built-in suites** — math reasoning, tool use, summarization, multihop QA.
-* **3 scorers** — exact match (with numeric extraction), semantic similarity,
+* **4 built-in suites** - math reasoning, tool use, summarization, multihop QA.
+* **3 scorers** - exact match (with numeric extraction), semantic similarity,
   LLM-as-judge.
-* **Cost tracking via LiteLLM** — works with any provider LiteLLM supports.
-* **HPO via Ray Tune** — sweep prompt styles, models, and decoding settings,
+* **Cost tracking via LiteLLM** - works with any provider LiteLLM supports.
+* **HPO via Ray Tune** - sweep prompt styles, models, and decoding settings,
   optimizing for `cost_adjusted_accuracy`.
-* **Leaderboards** — local JSON by default; Supabase backend behind a flag.
-* **FastAPI HTTP server** — `POST /run`, `GET /leaderboard`.
-* **Tracking-backend-agnostic** — bring W&B Weave, MLflow, or nothing.
+* **Leaderboards** - local JSON by default; Supabase backend behind a flag.
+* **FastAPI HTTP server** - `POST /run`, `GET /leaderboard`.
+* **Tracking-backend-agnostic** - bring W&B Weave, MLflow, or nothing.
 
 See the [quickstart](quickstart.md) for a full walkthrough or
 [concepts](concepts.md) for the design rationale.

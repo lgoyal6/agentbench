@@ -8,7 +8,7 @@ agent), an `expected_output`, a `difficulty`, a `scorer_type`, and free-form
 
 ## EvalSuite
 
-A named, versioned collection of tasks. Suites are immutable in spirit — bump
+A named, versioned collection of tasks. Suites are immutable in spirit - bump
 the `version` when you change the task set so leaderboard entries remain
 comparable. Built-in suites are registered by name and discoverable via
 `agentbench suite list`.
@@ -17,11 +17,11 @@ comparable. Built-in suites are registered by name and discoverable via
 
 A scorer maps `(prediction, reference) -> [0, 1]`. AgentBench ships three:
 
-* **ExactMatchScorer** — string equality after normalization, with a numeric
+* **ExactMatchScorer** - string equality after normalization, with a numeric
   fallback that extracts the last number in the prediction. This is what makes
   chain-of-thought outputs like "...therefore the answer is 42." score correctly.
-* **SemanticSimilarityScorer** — cosine of `all-MiniLM-L6-v2` embeddings.
-* **LLMJudgeScorer** — calls a configurable LLM via LiteLLM, parses a strict
+* **SemanticSimilarityScorer** - cosine of `all-MiniLM-L6-v2` embeddings.
+* **LLMJudgeScorer** - calls a configurable LLM via LiteLLM, parses a strict
   JSON `{"score": ..., "reasoning": ...}` response. Falls back to 0 on parse
   failure rather than crashing.
 
@@ -31,9 +31,9 @@ A score ≥ 0.5 is treated as "correct" when computing accuracy.
 
 Wraps LiteLLM's `completion_cost`. Tracks:
 
-* `total_cost_usd` — sum across all runs.
-* `avg_cost_per_run` — total / N.
-* `cost_per_correct_answer` — total / N correct. Returns `inf` when there are
+* `total_cost_usd` - sum across all runs.
+* `avg_cost_per_run` - total / N.
+* `cost_per_correct_answer` - total / N correct. Returns `inf` when there are
   no correct answers, so it remains sortable.
 
 Per-node breakdowns are available via `CostTracker.per_node()`.
@@ -52,7 +52,7 @@ cost_adjusted_accuracy = accuracy / (total_cost_cents + epsilon)
 ```
 
 The unit is "accuracy per cent". For a $0.01 run that scored 0.8, the result is
-roughly 80. It is intentionally **not** normalized to [0, 1] — comparisons are
+roughly 80. It is intentionally **not** normalized to [0, 1] - comparisons are
 only meaningful within the same suite and number of tasks.
 
 ## efficiency_score

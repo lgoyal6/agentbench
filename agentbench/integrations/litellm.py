@@ -18,8 +18,9 @@ from __future__ import annotations
 
 import contextvars
 import time
+from collections.abc import Iterator
 from contextlib import contextmanager
-from typing import Any, Iterator
+from typing import Any
 
 from agentbench.agent import NodeUsage
 from agentbench.metrics.cost import usage_from_litellm_response
@@ -91,5 +92,5 @@ def completion_with_capture(
             content = response["choices"][0]["message"]["content"]
         except (KeyError, IndexError, TypeError):
             content = ""
-        captured.add_messages(messages + [{"role": "assistant", "content": content}])
+        captured.add_messages([*messages, {"role": "assistant", "content": content}])
     return response

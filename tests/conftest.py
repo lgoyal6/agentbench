@@ -6,7 +6,7 @@ from typing import Any
 
 import pytest
 
-from agentbench.agent import AgentProtocol, AgentResult, NodeUsage
+from agentbench.agent import AgentResult, NodeUsage
 from agentbench.suites.base import EvalSuite, EvalTask
 
 
@@ -31,7 +31,7 @@ class CannedAgent:
         self.tokens = tokens
         self.name = name
 
-    def invoke(self, input: dict[str, Any]) -> AgentResult:  # noqa: A002
+    def invoke(self, input: dict[str, Any]) -> AgentResult:
         # The runner passes task.input which carries an "id" key only when callers
         # explicitly include one; otherwise tests can use a `task_id` field.
         task_id = input.get("task_id", "")

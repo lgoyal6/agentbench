@@ -95,23 +95,23 @@ def run(
 
 @app.command()
 def report(
-    input: Path = typer.Option(..., "--input", help="JSON report from `agentbench run`."),
-    format: str = typer.Option("table", "--format", help="One of: table, json, markdown."),
+    input_path: Path = typer.Option(..., "--input", help="JSON report from `agentbench run`."),
+    output_format: str = typer.Option("table", "--format", help="One of: table, json, markdown."),
 ) -> None:
     """Re-render an existing report in a different format."""
-    if not input.exists():
-        console.print(f"[red]error:[/red] {input} not found")
+    if not input_path.exists():
+        console.print(f"[red]error:[/red] {input_path} not found")
         raise typer.Exit(code=2)
-    data = json.loads(input.read_text(encoding="utf-8"))
+    data = json.loads(input_path.read_text(encoding="utf-8"))
     rep = EvalReport.model_validate(data)
-    if format == "table":
+    if output_format == "table":
         _print_report(rep)
-    elif format == "json":
+    elif output_format == "json":
         console.print_json(data=rep.model_dump(mode="json"))
-    elif format == "markdown":
+    elif output_format == "markdown":
         console.print(_report_as_markdown(rep))
     else:
-        console.print(f"[red]error:[/red] unknown format {format}")
+        console.print(f"[red]error:[/red] unknown format {output_format}")
         raise typer.Exit(code=2)
 
 

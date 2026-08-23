@@ -8,7 +8,8 @@ the chosen metric back to Tune, and collecting the trial dataframe.
 
 from __future__ import annotations
 
-from typing import Any, Callable, Literal
+from collections.abc import Callable
+from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 

@@ -38,9 +38,9 @@ __all__ = [
     "EvalTask",
     "get_suite",
     "list_suites",
-    "register_suite",
     "math_reasoning_suite",
-    "tool_use_suite",
-    "summarization_suite",
     "multihop_qa_suite",
+    "register_suite",
+    "summarization_suite",
+    "tool_use_suite",
 ]

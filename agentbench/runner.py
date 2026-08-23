@@ -41,7 +41,7 @@ class TrackerProtocol(Protocol):
         result: AgentResult,
         score: float,
     ) -> None: ...
-    def on_run_complete(self, run_id: str, report: "EvalReport") -> None: ...
+    def on_run_complete(self, run_id: str, report: EvalReport) -> None: ...
 
 
 class RunConfig(BaseModel):
@@ -139,7 +139,9 @@ class EvalRunner:
         self.suite = suite
         self.config = config or RunConfig()
         self.tracker = tracker
-        self.agent_name = agent_name or getattr(agent, "name", agent.__class__.__name__)
+        self.agent_name: str = agent_name or str(
+            getattr(agent, "name", None) or agent.__class__.__name__
+        )
         self._scorer_cache: dict[str, Scorer] = {}
 
     def _get_scorer(self, scorer_type: str) -> Scorer:

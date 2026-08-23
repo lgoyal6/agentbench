@@ -25,12 +25,12 @@ pytest --cov=agentbench
 | `agentbench/suites/`       | Built-in evals. New suites go here.                 |
 | `agentbench/hpo/`          | Ray Tune sweeps.                                    |
 | `agentbench/cli.py`        | Typer entry point.                                  |
-| `tests/`                   | pytest. No live network calls — mock LLMs.          |
+| `tests/`                   | pytest. No live network calls - mock LLMs.          |
 
 ## Code style
 
 * Ruff governs lint; mypy governs types. CI runs both.
-* Keep public APIs Pydantic v2 models — they serialize for free into reports
+* Keep public APIs Pydantic v2 models - they serialize for free into reports
   and leaderboard entries.
 * Prefer pure functions in `metrics/` so they can be tested without fixtures.
 * No `print`. Use `rich.console.Console` for CLI output and `logging` elsewhere.

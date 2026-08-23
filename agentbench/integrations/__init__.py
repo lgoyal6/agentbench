@@ -2,8 +2,8 @@
 
 from agentbench.integrations.litellm import (
     CapturedUsage,
-    usage_capture,
     completion_with_capture,
+    usage_capture,
 )
 
-__all__ = ["CapturedUsage", "usage_capture", "completion_with_capture"]
+__all__ = ["CapturedUsage", "completion_with_capture", "usage_capture"]

@@ -50,7 +50,7 @@ class LeaderboardEntry(BaseModel):
         model_used: str,
         agentbench_version: str,
         notes: str | None = None,
-    ) -> "LeaderboardEntry":
+    ) -> LeaderboardEntry:
         return cls(
             agent_name=agent_name,
             author=author,
