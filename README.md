@@ -1,23 +1,26 @@
 ```
 ╔══════════════════════════════════════════════════════════════════════╗
 ║                                                                      ║
-║      █████   ██████  ███████ ███    ██ ████████ ██████  ███████      ║
-║     ██   ██ ██       ██      ████   ██    ██    ██   ██ ██           ║
-║     ███████ ██   ███ █████   ██ ██  ██    ██    ██████  █████        ║
-║     ██   ██ ██    ██ ██      ██  ██ ██    ██    ██   ██ ██           ║
-║     ██   ██  ██████  ███████ ██   ████    ██    ██████  ███████      ║
+║                     ███   ████ █████ █   █ █████                     ║
+║                    █   █ █     █     ██  █   █                       ║
+║                    █████ █  ██ ███   █ █ █   █                       ║
+║                    █   █ █   █ █     █  ██   █                       ║
+║                    █   █  ████ █████ █   █   █                       ║
 ║                                                                      ║
-║                          E N C H                                     ║
+║                    ████  █████ █   █  ████ █   █                     ║
+║                    █   █ █     ██  █ █     █   █                     ║
+║                    ████  ███   █ █ █ █     █████                     ║
+║                    █   █ █     █  ██ █     █   █                     ║
+║                    ████  █████ █   █  ████ █   █                     ║
 ║                                                                      ║
-║          token economics + accuracy, in one number                   ║
+║              token economics + accuracy, in one number               ║
+║                                                                      ║
 ╚══════════════════════════════════════════════════════════════════════╝
 ```
 
-[![PyPI version](https://img.shields.io/pypi/v/agentbench.svg)](https://pypi.org/project/agentbench/)
-[![CI](https://github.com/agentbench/agentbench/actions/workflows/ci.yml/badge.svg)](https://github.com/agentbench/agentbench/actions/workflows/ci.yml)
-[![Coverage](https://img.shields.io/codecov/c/github/agentbench/agentbench)](https://codecov.io/gh/agentbench/agentbench)
+[![CI](https://github.com/lgoyal6/agentbench/actions/workflows/ci.yml/badge.svg)](https://github.com/lgoyal6/agentbench/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/pypi/pyversions/agentbench.svg)](https://pypi.org/project/agentbench/)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](pyproject.toml)
 
 **AgentBench is an evaluation framework for LangGraph agents that treats token
 economics as a first-class metric, alongside accuracy and latency.** A frontier
@@ -44,10 +47,14 @@ not just the highest-scoring one.
 ## Install
 
 ```bash
-pip install agentbench
+pip install git+https://github.com/lgoyal6/agentbench
 ```
 
-Optional extras: `pip install "agentbench[weave,mlflow,supabase,hf]"`.
+Optional extras:
+
+```bash
+pip install "agentbench[weave,mlflow,supabase,hf] @ git+https://github.com/lgoyal6/agentbench"
+```
 
 ## Quickstart
 
