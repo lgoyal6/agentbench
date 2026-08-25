@@ -50,10 +50,13 @@ not just the highest-scoring one.
 pip install git+https://github.com/lgoyal6/agentbench
 ```
 
+The distribution is `agent-bench`; the import is `agentbench`. The unhyphenated
+name on PyPI belongs to an unrelated package.
+
 Optional extras:
 
 ```bash
-pip install "agentbench[weave,mlflow,supabase,hf] @ git+https://github.com/lgoyal6/agentbench"
+pip install "agent-bench[weave,mlflow,supabase,hf] @ git+https://github.com/lgoyal6/agentbench"
 ```
 
 ## Quickstart
