@@ -105,7 +105,7 @@ no tools, no few-shot, `temperature=0`. Raw JSON in
 | **overall**    | **claude-haiku-4-5** | 55 | **0.964**| **$0.00076**     | -           | -           |
 
 Run on 2026-06-16 against `claude-haiku-4-5-20251001` via LiteLLM. Total
-spend: $0.0417 across all 55 tasks (\~$0.001 per task, end-to-end). The
+spend: $0.0416 across all 55 tasks (\~$0.001 per task, end-to-end). The
 summarization p95 outlier is a single slow API response - p50 is 1.4 s.
 
 Multi-model comparison rows (gpt-4o-mini, gemini-2.5-flash) are pending:
