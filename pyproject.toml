@@ -54,9 +54,9 @@ dev = [
 agentbench = "agentbench.cli:app"
 
 [project.urls]
-Homepage = "https://github.com/agentbench/agentbench"
-Documentation = "https://agentbench.dev"
-Issues = "https://github.com/agentbench/agentbench/issues"
+Homepage = "https://github.com/lgoyal6/agentbench"
+Documentation = "https://github.com/lgoyal6/agentbench#readme"
+Issues = "https://github.com/lgoyal6/agentbench/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["agentbench"]
