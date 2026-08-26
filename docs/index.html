@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>agentbench - what one reference run can tell you</title>
+<meta name="description" content="An eval harness that reports cost and latency next to accuracy. Four clean suites on one model, with the interval that a 10-task run actually supports.">
+<meta property="og:title" content="agentbench">
+<meta property="og:description" content="A perfect score on ten tasks has a lower bound of 72%. Cost per correct answer, latency percentiles, and the interval nobody prints.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="gut">
+  <div>
+    <div class="eyebrow">lgoyal6 / agentbench</div>
+    <h1>agentbench<span class="dot">.</span></h1>
+    <p class="thesis">
+      An evaluation harness for agents that treats token economics as a first-class
+      metric. A model that scores five points higher and burns fifty times the tokens is
+      not obviously the right choice, so every number here arrives next to its cost.
+    </p>
+    <p class="thesis">
+      <strong>This is the first reference run, and it is one model over four suites.</strong>
+      Reported with the interval a run this size actually supports, which is the thing an
+      accuracy figure alone hides.
+    </p>
+  </div>
+  <dl class="facts">
+    <div class="fact"><dt>tool use</dt><dd>15/15 <small>and a 0.80 lower bound</small></dd></div>
+    <div class="fact"><dt>dearest correct answer</dt><dd>$0.0011 <small>math reasoning</small></dd></div>
+    <div class="fact"><dt>cheapest</dt><dd>$0.0004 <small>summarization</small></dd></div>
+    <div class="fact"><dt>runs published</dt><dd>4 of 5 <small>one is void</small></dd></div>
+  </dl>
+</header>
+
+<section class="gut">
+  <div class="eyebrow">Figure 1</div>
+  <h2>Accuracy, and the interval it actually supports</h2>
+  <p class="lead">
+    Each suite is between ten and twenty tasks. At ten, one task is ten points, so the
+    Wilson interval is drawn next to the score rather than left out of it. A run that
+    reports 1.00 has not shown you a perfect model; it has shown you no failures in ten
+    tries.
+  </p>
+
+  <div class="figure">
+    <div class="figcap">
+      <span id="cap-what">Loading</span>
+      <span id="cap-judge"></span>
+    </div>
+    <div class="toolbar">
+      <span class="picklabel">Suite</span>
+      <div class="pick" id="suites" role="group" aria-label="Suite"></div>
+    </div>
+    <canvas class="plot" id="plot-acc" width="1200" height="300"></canvas>
+    <dl class="readout">
+      <div><dt>accuracy</dt><dd id="r-acc">-</dd></div>
+      <div><dt>95% interval</dt><dd id="r-ci">-</dd></div>
+      <div><dt>tasks</dt><dd id="r-n">-</dd></div>
+      <div><dt>per correct answer</dt><dd id="r-cpc">-</dd></div>
+      <div><dt>latency p50 / p95</dt><dd id="r-lat">-</dd></div>
+    </dl>
+    <div class="banner" id="acc-banner">Loading.</div>
+  </div>
+
+  <div class="split">
+    <div>
+      <h3>Why the interval belongs on the chart</h3>
+      <p>
+        Summarization scored <strong>10 out of 10</strong>. The 95% interval on that runs
+        from <strong>0.72 to 1.00</strong>. Tool use scored 15 out of 15 and its lower bound
+        is 0.80. Both are good results and neither one distinguishes a model that is right
+        99% of the time from one that is right three times in four.
+      </p>
+      <p>
+        Nothing about that is a criticism of the harness. It is what a first reference run
+        costs, and printing the bar makes the size of the run impossible to forget.
+      </p>
+    </div>
+    <dl class="takeaway">
+      <dt>what 1.00 means here</dt>
+      <dd>No failures in ten tries.<small>Lower bound 0.72.</small></dd>
+      <dt>what would fix it</dt>
+      <dd>More tasks, not more models.<small>Every suite is 10 to 20.</small></dd>
+      <dt>what it does show</dt>
+      <dd>Cost and latency, per correct answer.<small>Which is the part usually missing.</small></dd>
+    </dl>
+  </div>
+</section>
+
+<section class="gut">
+  <div class="eyebrow">Figure 2</div>
+  <h2>What each task cost, one by one</h2>
+  <p class="lead">
+    Cost and latency for every task in the selected suite. The spread inside a suite is
+    wider than the difference between suites, which is the argument for reporting cost per
+    correct answer rather than an average.
+  </p>
+  <div class="figure">
+    <div class="figcap">
+      <span id="cap-tasks">tasks</span>
+      <span>filled where the answer was judged correct</span>
+    </div>
+    <div class="toolbar">
+      <span class="picklabel">Showing</span>
+      <div class="pick" id="metrics" role="group" aria-label="Metric"></div>
+    </div>
+    <canvas class="plot" id="plot-tasks" width="1200" height="320"></canvas>
+    <div class="banner" id="task-banner"></div>
+  </div>
+</section>
+
+<section class="gut">
+  <div class="eyebrow">Figure 3</div>
+  <h2>Where it loses</h2>
+
+  <div class="void" id="void"></div>
+
+  <ul class="map">
+    <li>
+      <b>An errored call is scored zero and folded into accuracy.</b> That is why the run
+      above is not published as a model result. The count is tracked separately, so the
+      information is there, but the headline metric does not use it.
+      <span class="where">benchmarks/v0.1.0/</span>
+    </li>
+    <li>
+      <b>One model, and the comparison rows are pending.</b> The repository says so. A
+      harness whose point is comparing cost against accuracy needs more than one row to
+      make that argument, and this run does not have it.
+      <span class="where">README.md</span>
+    </li>
+    <li>
+      <b>Ten to twenty tasks a suite.</b> Enough to catch a broken agent, not enough to
+      separate two working ones. Every interval on this page is wide for that reason.
+      <span class="where">benchmarks/v0.1.0/</span>
+    </li>
+    <li>
+      <b>The judge is a model.</b> Correctness on these suites is decided by gpt-4o-mini,
+      which is cheap and repeatable and is not the same thing as a careful human label.
+      <span class="where">benchmarks/v0.1.0/</span>
+    </li>
+  </ul>
+</section>
+
+<footer class="gut">
+  <span>
+    <a href="https://github.com/lgoyal6/agentbench">github.com/lgoyal6/agentbench</a>
+    &middot; MIT
+  </span>
+  <span>
+    also: <a href="https://lgoyal6.github.io/memharness/">memharness</a>
+    &middot; <a href="https://lgoyal6.github.io/icp-benchmark/">icp-benchmark</a>
+    &middot; <a href="https://lgoyal6.github.io/promptgate/">promptgate</a>
+  </span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
