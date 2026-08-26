@@ -2,10 +2,10 @@
 
 Exposes two things:
 
-* :func:`completion_with_capture` — a thin wrapper around ``litellm.completion``
+* :func:`completion_with_capture` - a thin wrapper around ``litellm.completion``
   that also records a :class:`~agentbench.agent.NodeUsage` entry into the
   thread-local capture buffer.
-* :func:`usage_capture` — a context manager that opens a fresh capture buffer
+* :func:`usage_capture` - a context manager that opens a fresh capture buffer
   and yields a :class:`CapturedUsage` accumulator. The wrapper used inside the
   context records into it.
 

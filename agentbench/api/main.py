@@ -3,10 +3,10 @@
 Endpoints
 ---------
 
-* ``GET  /health`` — liveness check.
-* ``POST /run`` — kick off an async eval run.
-* ``GET  /run/{run_id}`` — status + partial / final report.
-* ``GET  /leaderboard`` — top entries per suite.
+* ``GET  /health`` - liveness check.
+* ``POST /run`` - kick off an async eval run.
+* ``GET  /run/{run_id}`` - status + partial / final report.
+* ``GET  /leaderboard`` - top entries per suite.
 """
 
 from __future__ import annotations

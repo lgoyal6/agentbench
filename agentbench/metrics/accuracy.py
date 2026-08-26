@@ -2,10 +2,10 @@
 
 Three implementations of the :class:`Scorer` protocol:
 
-* :class:`ExactMatchScorer` — string equality after light normalization.
-* :class:`SemanticSimilarityScorer` — cosine similarity of sentence-transformers
+* :class:`ExactMatchScorer` - string equality after light normalization.
+* :class:`SemanticSimilarityScorer` - cosine similarity of sentence-transformers
   embeddings (lazy-loaded so importing the package doesn't pay the model cost).
-* :class:`LLMJudgeScorer` — an LLM grades the prediction against the reference
+* :class:`LLMJudgeScorer` - an LLM grades the prediction against the reference
   and returns a 0-1 score with reasoning, via LiteLLM.
 """
 

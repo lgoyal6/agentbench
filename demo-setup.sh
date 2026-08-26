@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Setup for demo.tape — meant to be *sourced* (not executed) so the exports
+# Setup for demo.tape - meant to be *sourced* (not executed) so the exports
 # persist in the recording shell. This keeps every long command out of the
 # recording: the tape only ever types `source demo-setup.sh`.
 export PATH="$PWD/.venv/bin:$PATH"
