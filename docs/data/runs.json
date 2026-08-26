@@ -1,0 +1,495 @@
+{
+ "runs": [
+  {
+   "file": "claude-haiku-4-5-multihop_qa.json",
+   "suite": "multihop_qa",
+   "agent": "simple-reasoner",
+   "n_tasks": 10,
+   "n_correct": 9,
+   "n_errors": 0,
+   "accuracy": 0.9,
+   "total_cost_usd": 0.008052,
+   "avg_cost_per_run": 0.0008052000000000001,
+   "cost_per_correct_answer": 0.0008946666666666667,
+   "p50_latency_ms": 1991.6113545041298,
+   "p95_latency_ms": 3356.9838225463163,
+   "p99_latency_ms": 3766.176397308591,
+   "judge_model": "gpt-4o-mini",
+   "concurrency": 4,
+   "wilson_lo": 0.5958499704752279,
+   "wilson_hi": 0.982123787103926,
+   "tasks": [
+    {
+     "task_id": "mhqa-01",
+     "correct": false,
+     "cost_usd": 0.000517,
+     "latency_ms": 2351.6347499971744,
+     "total_tokens": 161
+    },
+    {
+     "task_id": "mhqa-02",
+     "correct": true,
+     "cost_usd": 0.0006850000000000001,
+     "latency_ms": 2731.8284999928437,
+     "total_tokens": 213
+    },
+    {
+     "task_id": "mhqa-03",
+     "correct": true,
+     "cost_usd": 0.000418,
+     "latency_ms": 2112.5632920011412,
+     "total_tokens": 142
+    },
+    {
+     "task_id": "mhqa-04",
+     "correct": true,
+     "cost_usd": 0.000706,
+     "latency_ms": 3868.474540999159,
+     "total_tokens": 214
+    },
+    {
+     "task_id": "mhqa-05",
+     "correct": true,
+     "cost_usd": 0.001256,
+     "latency_ms": 1887.4152500065975,
+     "total_tokens": 328
+    },
+    {
+     "task_id": "mhqa-06",
+     "correct": true,
+     "cost_usd": 0.00111,
+     "latency_ms": 2095.807459001662,
+     "total_tokens": 282
+    },
+    {
+     "task_id": "mhqa-07",
+     "correct": true,
+     "cost_usd": 0.00047100000000000006,
+     "latency_ms": 1022.6460830017459,
+     "total_tokens": 159
+    },
+    {
+     "task_id": "mhqa-08",
+     "correct": true,
+     "cost_usd": 0.001169,
+     "latency_ms": 1681.6894589865115,
+     "total_tokens": 305
+    },
+    {
+     "task_id": "mhqa-09",
+     "correct": true,
+     "cost_usd": 0.000673,
+     "latency_ms": 1439.2787909891922,
+     "total_tokens": 205
+    },
+    {
+     "task_id": "mhqa-10",
+     "correct": true,
+     "cost_usd": 0.0010470000000000002,
+     "latency_ms": 1814.5679160079453,
+     "total_tokens": 287
+    }
+   ]
+  },
+  {
+   "file": "claude-haiku-4-5-summarization.json",
+   "suite": "summarization",
+   "agent": "simple-reasoner",
+   "n_tasks": 10,
+   "n_correct": 10,
+   "n_errors": 0,
+   "accuracy": 1.0,
+   "total_cost_usd": 0.00347,
+   "avg_cost_per_run": 0.000347,
+   "cost_per_correct_answer": 0.000347,
+   "p50_latency_ms": 1419.975812503253,
+   "p95_latency_ms": 22615.00639344882,
+   "p99_latency_ms": 34666.886578695565,
+   "judge_model": "gpt-4o-mini",
+   "concurrency": 4,
+   "wilson_lo": 0.7224671969739421,
+   "wilson_hi": 0.9999999999999999,
+   "tasks": [
+    {
+     "task_id": "sum-01",
+     "correct": true,
+     "cost_usd": 0.000437,
+     "latency_ms": 4202.41166598862,
+     "total_tokens": 201
+    },
+    {
+     "task_id": "sum-02",
+     "correct": true,
+     "cost_usd": 0.000304,
+     "latency_ms": 2227.9237500042655,
+     "total_tokens": 156
+    },
+    {
+     "task_id": "sum-03",
+     "correct": true,
+     "cost_usd": 0.000292,
+     "latency_ms": 2523.2292499858886,
+     "total_tokens": 164
+    },
+    {
+     "task_id": "sum-04",
+     "correct": true,
+     "cost_usd": 0.000375,
+     "latency_ms": 37679.85662500723,
+     "total_tokens": 179
+    },
+    {
+     "task_id": "sum-05",
+     "correct": true,
+     "cost_usd": 0.00031,
+     "latency_ms": 1039.2328330199234,
+     "total_tokens": 158
+    },
+    {
+     "task_id": "sum-06",
+     "correct": true,
+     "cost_usd": 0.000378,
+     "latency_ms": 1800.7187919865828,
+     "total_tokens": 186
+    },
+    {
+     "task_id": "sum-07",
+     "correct": true,
+     "cost_usd": 0.000337,
+     "latency_ms": 964.2527499818243,
+     "total_tokens": 165
+    },
+    {
+     "task_id": "sum-08",
+     "correct": true,
+     "cost_usd": 0.000322,
+     "latency_ms": 727.6638750045095,
+     "total_tokens": 170
+    },
+    {
+     "task_id": "sum-09",
+     "correct": true,
+     "cost_usd": 0.000355,
+     "latency_ms": 762.0590000005905,
+     "total_tokens": 179
+    },
+    {
+     "task_id": "sum-10",
+     "correct": true,
+     "cost_usd": 0.00036,
+     "latency_ms": 971.1570829967968,
+     "total_tokens": 180
+    }
+   ]
+  },
+  {
+   "file": "claude-haiku-4-5-tool_use.json",
+   "suite": "tool_use",
+   "agent": "simple-reasoner",
+   "n_tasks": 15,
+   "n_correct": 15,
+   "n_errors": 0,
+   "accuracy": 1.0,
+   "total_cost_usd": 0.00875,
+   "avg_cost_per_run": 0.0005833333333333334,
+   "cost_per_correct_answer": 0.0005833333333333334,
+   "p50_latency_ms": 1745.0861249817535,
+   "p95_latency_ms": 3215.7601706945566,
+   "p99_latency_ms": 3363.384267730289,
+   "judge_model": "gpt-4o-mini",
+   "concurrency": 4,
+   "wilson_lo": 0.7961166964035129,
+   "wilson_hi": 1.0,
+   "tasks": [
+    {
+     "task_id": "tool-01",
+     "correct": true,
+     "cost_usd": 0.000415,
+     "latency_ms": 2584.945875016274,
+     "total_tokens": 123
+    },
+    {
+     "task_id": "tool-02",
+     "correct": true,
+     "cost_usd": 0.0008300000000000001,
+     "latency_ms": 3400.290291989222,
+     "total_tokens": 206
+    },
+    {
+     "task_id": "tool-03",
+     "correct": true,
+     "cost_usd": 0.000563,
+     "latency_ms": 2810.2758750028443,
+     "total_tokens": 155
+    },
+    {
+     "task_id": "tool-04",
+     "correct": true,
+     "cost_usd": 0.000573,
+     "latency_ms": 2812.523540982511,
+     "total_tokens": 157
+    },
+    {
+     "task_id": "tool-05",
+     "correct": true,
+     "cost_usd": 0.00042400000000000006,
+     "latency_ms": 1093.5038329917006,
+     "total_tokens": 128
+    },
+    {
+     "task_id": "tool-06",
+     "correct": true,
+     "cost_usd": 0.0005830000000000001,
+     "latency_ms": 1660.1931659970433,
+     "total_tokens": 159
+    },
+    {
+     "task_id": "tool-07",
+     "correct": true,
+     "cost_usd": 0.000893,
+     "latency_ms": 3136.6758329968434,
+     "total_tokens": 217
+    },
+    {
+     "task_id": "tool-08",
+     "correct": true,
+     "cost_usd": 0.000285,
+     "latency_ms": 1080.9452910034452,
+     "total_tokens": 97
+    },
+    {
+     "task_id": "tool-09",
+     "correct": true,
+     "cost_usd": 0.0008150000000000001,
+     "latency_ms": 2270.963708026102,
+     "total_tokens": 203
+    },
+    {
+     "task_id": "tool-10",
+     "correct": true,
+     "cost_usd": 0.000455,
+     "latency_ms": 1304.6122499799822,
+     "total_tokens": 131
+    },
+    {
+     "task_id": "tool-11",
+     "correct": true,
+     "cost_usd": 0.000594,
+     "latency_ms": 1585.0930409797002,
+     "total_tokens": 166
+    },
+    {
+     "task_id": "tool-12",
+     "correct": true,
+     "cost_usd": 0.0005920000000000001,
+     "latency_ms": 1745.0861249817535,
+     "total_tokens": 168
+    },
+    {
+     "task_id": "tool-13",
+     "correct": true,
+     "cost_usd": 0.0007050000000000001,
+     "latency_ms": 1783.001959003741,
+     "total_tokens": 189
+    },
+    {
+     "task_id": "tool-14",
+     "correct": true,
+     "cost_usd": 0.000458,
+     "latency_ms": 1398.4595840156544,
+     "total_tokens": 134
+    },
+    {
+     "task_id": "tool-15",
+     "correct": true,
+     "cost_usd": 0.000565,
+     "latency_ms": 1305.57008300093,
+     "total_tokens": 165
+    }
+   ]
+  },
+  {
+   "file": "claude-haiku-4-5.json",
+   "suite": "math_reasoning",
+   "agent": "simple-reasoner",
+   "n_tasks": 20,
+   "n_correct": 19,
+   "n_errors": 0,
+   "accuracy": 0.95,
+   "total_cost_usd": 0.021343,
+   "avg_cost_per_run": 0.00106715,
+   "cost_per_correct_answer": 0.0011233157894736843,
+   "p50_latency_ms": 2222.4265420081792,
+   "p95_latency_ms": 2619.082252112276,
+   "p99_latency_ms": 2849.860084026877,
+   "judge_model": "gpt-4o-mini",
+   "concurrency": 4,
+   "wilson_lo": 0.7638688045357189,
+   "wilson_hi": 0.9911185512976646,
+   "tasks": [
+    {
+     "task_id": "math-01",
+     "correct": true,
+     "cost_usd": 0.000718,
+     "latency_ms": 2530.9105000051204,
+     "total_tokens": 210
+    },
+    {
+     "task_id": "math-02",
+     "correct": true,
+     "cost_usd": 0.000476,
+     "latency_ms": 2332.864875002997,
+     "total_tokens": 148
+    },
+    {
+     "task_id": "math-03",
+     "correct": true,
+     "cost_usd": 0.00047400000000000003,
+     "latency_ms": 2287.3662500060163,
+     "total_tokens": 154
+    },
+    {
+     "task_id": "math-04",
+     "correct": true,
+     "cost_usd": 0.000428,
+     "latency_ms": 2287.9862500121817,
+     "total_tokens": 140
+    },
+    {
+     "task_id": "math-05",
+     "correct": true,
+     "cost_usd": 0.000476,
+     "latency_ms": 1387.4543749843724,
+     "total_tokens": 148
+    },
+    {
+     "task_id": "math-06",
+     "correct": true,
+     "cost_usd": 0.000785,
+     "latency_ms": 1308.2657500053756,
+     "total_tokens": 221
+    },
+    {
+     "task_id": "math-07",
+     "correct": true,
+     "cost_usd": 0.001659,
+     "latency_ms": 2179.5838340185583,
+     "total_tokens": 419
+    },
+    {
+     "task_id": "math-08",
+     "correct": true,
+     "cost_usd": 0.000965,
+     "latency_ms": 2907.5545420055278,
+     "total_tokens": 253
+    },
+    {
+     "task_id": "math-09",
+     "correct": true,
+     "cost_usd": 0.0018110000000000001,
+     "latency_ms": 2352.835583995329,
+     "total_tokens": 423
+    },
+    {
+     "task_id": "math-10",
+     "correct": true,
+     "cost_usd": 0.000648,
+     "latency_ms": 1070.1146659848746,
+     "total_tokens": 200
+    },
+    {
+     "task_id": "math-11",
+     "correct": true,
+     "cost_usd": 0.0016190000000000002,
+     "latency_ms": 2377.462625008775,
+     "total_tokens": 395
+    },
+    {
+     "task_id": "math-12",
+     "correct": false,
+     "cost_usd": 0.000972,
+     "latency_ms": 1604.690916981781,
+     "total_tokens": 268
+    },
+    {
+     "task_id": "math-13",
+     "correct": true,
+     "cost_usd": 0.0010420000000000002,
+     "latency_ms": 1466.2775000033434,
+     "total_tokens": 278
+    },
+    {
+     "task_id": "math-14",
+     "correct": true,
+     "cost_usd": 0.00185,
+     "latency_ms": 2483.953291986836,
+     "total_tokens": 426
+    },
+    {
+     "task_id": "math-15",
+     "correct": true,
+     "cost_usd": 0.001128,
+     "latency_ms": 1705.6859160074964,
+     "total_tokens": 280
+    },
+    {
+     "task_id": "math-16",
+     "correct": true,
+     "cost_usd": 0.0008960000000000001,
+     "latency_ms": 1764.9142919981387,
+     "total_tokens": 240
+    },
+    {
+     "task_id": "math-17",
+     "correct": true,
+     "cost_usd": 0.001502,
+     "latency_ms": 2603.8995000126306,
+     "total_tokens": 366
+    },
+    {
+     "task_id": "math-18",
+     "correct": true,
+     "cost_usd": 0.001182,
+     "latency_ms": 1561.194499983685,
+     "total_tokens": 306
+    },
+    {
+     "task_id": "math-19",
+     "correct": true,
+     "cost_usd": 0.000994,
+     "latency_ms": 1495.3375420009252,
+     "total_tokens": 258
+    },
+    {
+     "task_id": "math-20",
+     "correct": true,
+     "cost_usd": 0.0017180000000000001,
+     "latency_ms": 2265.2692499978,
+     "total_tokens": 406
+    }
+   ]
+  }
+ ],
+ "void": [
+  {
+   "file": "gemini-2.5-flash.json",
+   "suite": "math_reasoning",
+   "agent": "simple-reasoner",
+   "n_tasks": 20,
+   "n_correct": 5,
+   "n_errors": 15,
+   "accuracy": 0.25,
+   "total_cost_usd": 0.006282500000000001,
+   "avg_cost_per_run": 0.00031412500000000006,
+   "cost_per_correct_answer": 0.0012565000000000002,
+   "p50_latency_ms": 5243.26674999611,
+   "p95_latency_ms": 8651.986955932807,
+   "p99_latency_ms": 9900.397124800364,
+   "judge_model": "gpt-4o-mini",
+   "concurrency": 1,
+   "error_kind": "RateLimitError",
+   "n_errored": 15
+  }
+ ],
+ "suite_version": "0.1.0"
+}
