@@ -94,6 +94,9 @@ agentbench run --agent my_agent.py --suite math_reasoning --trials 20
 
 ## Benchmark results
 
+**[See them: lgoyal6.github.io/agentbench](https://lgoyal6.github.io/agentbench/)** - the same
+runs with the interval a 10-task suite actually supports, and cost and latency per task.
+
 First reference run, all four suites (n=55 tasks), agent =
 [`examples/simple_agent.py`](examples/simple_agent.py), single-node LangGraph,
 no tools, no few-shot, `temperature=0`. Raw JSON in
