@@ -24,9 +24,9 @@ class CostTracker:
 
     The tracker computes three useful quantities:
 
-    * :attr:`total_cost_usd` — sum of cost over every run.
-    * :attr:`avg_cost_per_run` — total cost / number of runs.
-    * :attr:`cost_per_correct_answer` — total cost / number correct, with a
+    * :attr:`total_cost_usd` - sum of cost over every run.
+    * :attr:`avg_cost_per_run` - total cost / number of runs.
+    * :attr:`cost_per_correct_answer` - total cost / number correct, with a
       sentinel value (``float('inf')``) when no answers were correct.
     """
 

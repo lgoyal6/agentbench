@@ -142,7 +142,7 @@ def _print_report(report: EvalReport, *, highlight_metric: str = "cost_adjusted_
 
 def _report_as_markdown(report: EvalReport) -> str:
     return (
-        f"## AgentBench report — {report.suite_name} v{report.suite_version}\n\n"
+        f"## AgentBench report - {report.suite_name} v{report.suite_version}\n\n"
         f"Agent: **{report.agent_name}**\n\n"
         f"| metric | value |\n|---|---|\n"
         f"| accuracy | {report.accuracy:.3f} |\n"
@@ -217,7 +217,7 @@ def leaderboard_show(
 ) -> None:
     """Show the leaderboard, sorted by ``metric``."""
     entries = get_leaderboard().list(suite=suite, top=top, metric=metric)
-    title = f"Leaderboard — {suite or 'all suites'} (sorted by {metric})"
+    title = f"Leaderboard - {suite or 'all suites'} (sorted by {metric})"
     table = Table(title=title)
     table.add_column("rank", justify="right")
     table.add_column("agent", style="cyan")

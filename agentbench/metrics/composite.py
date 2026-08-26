@@ -54,7 +54,7 @@ def efficiency_score(accuracy: float, latency_ms: float) -> float:
     Args:
         accuracy: Mean accuracy on the suite, in [0, 1].
         latency_ms: Mean latency in milliseconds (use the mean, not p95, so the
-            metric is symmetric with cost — both are sums divided by N).
+            metric is symmetric with cost - both are sums divided by N).
 
     Returns:
         Efficiency score, higher is better. Returns 0 when latency is 0.

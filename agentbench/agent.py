@@ -64,7 +64,7 @@ class AgentProtocol(Protocol):
     """Protocol every evaluatable agent must satisfy.
 
     Implementations should be deterministic enough that re-invoking with the same
-    input produces comparable results — but the framework does NOT require strict
+    input produces comparable results - but the framework does NOT require strict
     determinism (temperature > 0 is fine and explicitly supported).
     """
 

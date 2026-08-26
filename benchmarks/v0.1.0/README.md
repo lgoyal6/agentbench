@@ -33,13 +33,13 @@ done
 
 To compare another model, swap `AGENTBENCH_EXAMPLE_MODEL` to its LiteLLM id
 (e.g. `gpt-4o-mini`, `gemini/gemini-2.5-flash`) and re-run. Gemini free tier
-caps at 20 req/day per model — enable billing or expect partial runs.
+caps at 20 req/day per model - enable billing or expect partial runs.
 
 ## Caveats
 
 - The example agent is a single LangGraph reasoning node with no tool calls.
   `tool_use` scoring at 1.000 means Claude answered the test questions from
   parametric knowledge; it does **not** demonstrate tool-calling capability.
-- `temperature=0`, single trial per task — no variance bars.
+- `temperature=0`, single trial per task - no variance bars.
 - The `summarization` p95 (22.6 s) is an outlier from a single slow API
   response. Median p50 is 1.4 s.
