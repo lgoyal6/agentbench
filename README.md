@@ -1,3 +1,10 @@
+<a href="https://lgoyal6.github.io/agentbench/">
+  <img alt="agentbench - open the live demo" src="docs/og.png">
+</a>
+
+**[Open the live demo](https://lgoyal6.github.io/agentbench/)** - The same
+runs with the interval a 10-task suite actually supports, and cost and latency per task.
+
 ```
 ╔══════════════════════════════════════════════════════════════════════╗
 ║                                                                      ║
@@ -93,9 +100,6 @@ agentbench run --agent my_agent.py --suite math_reasoning --trials 20
 ```
 
 ## Benchmark results
-
-**[See them: lgoyal6.github.io/agentbench](https://lgoyal6.github.io/agentbench/)** - the same
-runs with the interval a 10-task suite actually supports, and cost and latency per task.
 
 First reference run, all four suites (n=55 tasks), agent =
 [`examples/simple_agent.py`](examples/simple_agent.py), single-node LangGraph,
