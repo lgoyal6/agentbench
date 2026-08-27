@@ -64,7 +64,7 @@ function drawAcc() {
   ctx.font = "11px 'Courier New', monospace";
   ctx.textAlign = 'center';
   for (let v = 0; v <= 1.0001; v += 0.25) {
-    ctx.strokeStyle = '#e8e3d6';
+    ctx.strokeStyle = css('--grid');
     ctx.beginPath(); ctx.moveTo(X(v), pad.t); ctx.lineTo(X(v), pad.t + rows.length * rowH); ctx.stroke();
     ctx.fillStyle = css('--faint');
     ctx.fillText(pctf(v), X(v), h - 22);
@@ -155,7 +155,7 @@ function drawTasks() {
     ctx.fillStyle = css('--faint');
     ctx.fillText(m.fmt(v), pad.l - 8, Y(v) + 3);
     if (i) {
-      ctx.strokeStyle = '#e8e3d6';
+      ctx.strokeStyle = css('--grid');
       ctx.beginPath(); ctx.moveTo(pad.l, Y(v)); ctx.lineTo(pad.l + iw, Y(v)); ctx.stroke();
     }
   }
